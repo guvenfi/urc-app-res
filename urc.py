@@ -3,8 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # CSV dosyasını yükleme
-url="https://github.com/emirayurc/urc-app-res/blob/main/ortalamalar.csv"
-df = pd.read_csv(url, index_col=0)
+url="ortalamalar.csv"
+df = pd.read_csv(url)
 
 # Günlük maksimum ortalama rüzgar hızı
 df_daily_max = df.groupby('TIME')['Wind120'].max()
