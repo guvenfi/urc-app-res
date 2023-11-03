@@ -63,12 +63,12 @@ if not df_selected.empty:
 
     ax.scatter(df_daily_max['TIME'], df_daily_max['Wind120'], color='red',s=2, label='İlgili günün en yüksek hızına sahip sahalar')
     for i, txt in enumerate(max_farms):
-        ax.annotate(txt, (df_daily_max['TIME'][i], df_daily_max['Wind120'][i]), textcoords="offset points", xytext=(0,10), ha='center')
+        ax.annotate(txt, (df_daily_max['TIME'][i], df_daily_max['Wind120'][i]), textcoords="offset points", xytext=(0,10), ha='center',fontsize=5)
     
     ax.set_ylabel('Rüzgar Hızı (m/s)')
     ax.set_title('15 Günlük Ortalama Rüzgar Hızı ')
     ax.set_xlabel('Zaman')
-    ax.legend(fontsize=8)
+    ax.legend(fontsize=5)
 
     # Rotate x-axis labels
     plt.xticks(rotation=90)
