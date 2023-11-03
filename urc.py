@@ -56,7 +56,7 @@ with expander:
             st.write(f"{i+1}. {farm}: {avg_speed_rounded} m/s")
 # Grafiği oluşturma
 if not df_selected.empty:
-    fig, ax = plt.subplots(figsize=(14,11))  # Boyutları istediğiniz gibi ayarlayabilirsiniz
+    fig, ax = plt.subplots(figsize=(10,11))  # Boyutları istediğiniz gibi ayarlayabilirsiniz
     for farm in selected_farms:
         df_farm = df_selected[df_selected['farm_unique_name'] == farm]
         ax.plot(df_farm['TIME'], df_farm['Wind120'], label=farm)
