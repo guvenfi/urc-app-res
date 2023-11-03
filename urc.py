@@ -68,7 +68,7 @@ if not df_selected.empty:
     ax.set_ylabel('Rüzgar Hızı (m/s)')
     ax.set_title('15 Günlük Ortalama Rüzgar Hızı ')
     ax.set_xlabel('Zaman')
-    ax.legend()
+    ax.legend(fontsize=8)
 
     # Rotate x-axis labels
     plt.xticks(rotation=90)
