@@ -63,18 +63,17 @@ if not df_selected.empty:
 
     ax.scatter(df_daily_max['TIME'], df_daily_max['Wind120'], color='red',s=2, label='İlgili günün en yüksek hızına sahip sahalar')
     for i, txt in enumerate(max_farms):
-        ax.annotate(txt, (df_daily_max['TIME'][i], df_daily_max['Wind120'][i]), textcoords="offset points", xytext=(0,10), ha='center',fontsize=5)
+        ax.annotate(txt, (df_daily_max['TIME'][i], df_daily_max['Wind120'][i]), textcoords="offset points", xytext=(0,5), ha='center',fontsize=5)
     
-    ax.set_ylabel('Rüzgar Hızı (m/s)')
-    ax.set_title('15 Günlük Ortalama Rüzgar Hızı ')
-    ax.set_xlabel('Zaman')
+    ax.set_ylabel('Rüzgar Hızı (m/s)',fontsize=5)
+    ax.set_title('15 Günlük Ortalama Rüzgar Hızı',fontsize=5)
+    ax.set_xlabel('Zaman',fontsize=5)
     ax.legend(fontsize=5)
-
+    plt.xticks(fontsize=5)  
+    plt.yticks(fontsize=5) 
     # Rotate x-axis labels
     plt.xticks(rotation=90)
-    for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
-                 ax.get_xticklabels() + ax.get_yticklabels()):
-        item.set_fontsize(5)  # Metin boyutunu ihtiyacınıza göre ayarlayın
+   
 
     st.pyplot(fig)
 else:
