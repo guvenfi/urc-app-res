@@ -74,7 +74,7 @@ if not df_selected.empty:
     plt.xticks(rotation=90)
     for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
                  ax.get_xticklabels() + ax.get_yticklabels()):
-        item.set_fontsize(10)  # Metin boyutunu ihtiyacınıza göre ayarlayın
+        item.set_fontsize(5)  # Metin boyutunu ihtiyacınıza göre ayarlayın
 
     st.pyplot(fig)
 else:
